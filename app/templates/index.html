@@ -1,0 +1,15 @@
+<html>
+    <head>
+      <title>{{ title }} - Microblog</title>
+    </head>
+    <body>
+        <h1>Hello, {{ user.name }}!</h1>
+        <form method="post" action="/sendBreakfast">
+            <label for="nickname">What's your nickname?</label>
+            <input type='text' name='nickname'>
+            <label for="breakfast">What did you have for breakfast?</label>
+            <input type='text' name='breakfast'>
+            <input type='submit'>
+        </form>
+    </body>
+</html>
