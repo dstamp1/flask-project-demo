@@ -1,15 +1,22 @@
-<html>
-    <head>
-      <title>{{ title }} - Microblog</title>
-    </head>
-    <body>
-        <h1>Hello, {{ user.name }}!</h1>
+{% extends "base.html" %}
+
+{% block title %}
+    Microblog
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h1>Hello, {{ user.name }}!</h1>        
+    </div>
+    <div class="col">
         <form method="post" action="/sendBreakfast">
             <label for="nickname">What's your nickname?</label>
             <input type='text' name='nickname'>
             <label for="breakfast">What did you have for breakfast?</label>
             <input type='text' name='breakfast'>
             <input type='submit'>
-        </form>
-    </body>
-</html>
+        </form>        
+    </div>
+</div>
+{% endblock %}

@@ -9,6 +9,7 @@ from flask import request
 def index():
     user = {'name': 'Alejandra'}
     return render_template('index.html', title='Home', user=user)
+    
 @app.route('/secret')
 def secret():
     return "<h1>You found the secret!</h1>"
@@ -23,6 +24,7 @@ def handleBreakfast():
         nickname = userdata['nickname'] # Note that we access the first item in the list provided by the "nickname key"
         # Store the breakfast in a variable for easy reference
         breakfast = userdata['breakfast']
+        
         nickname = model.shout(userdata['nickname'])
         breakfast = model.shout(userdata['breakfast'])
         # Use those variables to create a dynamic result for our user
