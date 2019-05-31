@@ -7,12 +7,14 @@ from flask import request
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'name': 'Alejandra'}
+    user = {'name': 'Derek'}
     return render_template('index.html', title='Home', user=user)
     
-@app.route('/secret')
-def secret():
-    return "<h1>You found the secret!</h1>"
+@app.route('/user/<name>')
+def user_page(name):
+    user = {'name': name}
+    return render_template('index.html', title='Home', user=user)
+    
     
 @app.route('/sendBreakfast', methods=['GET', 'POST'])
 def handleBreakfast():
