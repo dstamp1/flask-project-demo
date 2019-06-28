@@ -1,5 +1,5 @@
 def piglatinify(string):
-    lst = ['sh', 'gl', 'ch', 'ph', 'tr', 'br', 'fr', 'bl', 'gr', 'st', 'sl', 'cl', 'pl', 'fl']
+    lst = ['sh', 'gl', 'ch', 'ph', 'tr', 'br', 'fr', 'bl', 'gr', 'st', 'sl', 'cl', 'pl', 'fl','qu']
     sentence = string.split()
     for k in range(len(sentence)):
             i = sentence[k]

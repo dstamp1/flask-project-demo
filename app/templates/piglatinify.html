@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Microblog
+    Pig Latin Translator
 {% endblock %}
 
 {% block content %}
@@ -9,9 +9,14 @@
     <div class="col s12 m12 l12">
       <h1>English to Pig Latin Translator</h1>
         <h2>Your Translated Sentence</h2>
-          <p>{{english_sentence}}</P>
-        <h2>Your Original Sentence</h2>
           <p>{{piglatin_sentence}}</P>
+        <h2>Your Original Sentence</h2>
+          <p>{{english_sentence}}</P>
+    </div>
+    <div class="col">
+      <button class="btn waves-effect waves-light" onclick="location.href='/index.html'" type="button">
+        Translate Another Sentence
+      </button>
     </div>
 </div>
 {% endblock %}
